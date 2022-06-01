@@ -14,6 +14,13 @@ describe("Testing of EA app", () => {
         cy.get('.btn').click();
         cy.get('#logoutForm > .nav > :nth-child(1) > a').should("have.text","Hello admin!")
 
+        //Click Employee List
+        cy.contains("Employee List").click();
+
+        //Click on Prashanth's Benefits
+        cy.get('.table').find('tr').contains('Prashanth').parent().contains('Benefits').click();
+
+
     })
 
 })
